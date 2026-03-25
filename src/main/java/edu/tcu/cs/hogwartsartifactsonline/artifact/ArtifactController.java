@@ -47,7 +47,7 @@ public class ArtifactController {
         Artifact savedArtifact = this.artifactService.save(newArtifact);
 
         ArtifactDto savedArtifactDto = this.artifactToArtifactDtoConverter.convert(savedArtifact);
-        return new Result(true, StatusCode.OK, "Saved one", savedArtifactDto);
+        return new Result(true, StatusCode. OK, "Saved one", savedArtifactDto);
     }
 
     @PutMapping("/{artifactId}")

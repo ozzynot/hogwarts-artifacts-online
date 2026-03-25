@@ -10,8 +10,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class DBDataInitializer implements CommandLineRunner {
 
-
-
     private final ArtifactRepository artifactRepository;
 
     private final WizardRepository wizardRepository;
@@ -23,8 +21,6 @@ public class DBDataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
-
 
         Artifact a1 = new Artifact();
         a1.setName("artifact1");
@@ -43,44 +39,37 @@ public class DBDataInitializer implements CommandLineRunner {
         a3.setId("3453");
         a3.setDescription("artifact3 description");
         a3.setImgUrl("artifact3 imgUrl");
-//        this.artifacts.add(a3);
 
         Artifact a4 = new Artifact();
         a4.setName("artifact4");
         a4.setId("45678");
         a4.setDescription("artifact4 description");
         a4.setImgUrl("artifact4 imgUrl");
-//        this.artifacts.add(a4);
 
         Artifact a5 = new Artifact();
         a5.setName("artifact5");
         a5.setId("2345");
         a5.setDescription("artifact5 description");
         a5.setImgUrl("artifact5 imgUrl");
-//        this.artifacts.add(a5);
 
         Artifact a6 = new Artifact();
         a6.setName("artifact6");
         a6.setId("53143");
         a6.setDescription("artifact6 description");
         a6.setImgUrl("artifact6 imgUrl");
-//        this.artifacts.add(a6);
 
         Wizard w1 = new Wizard();
         w1.setName("wizard1");
-        w1.setId(1);
         w1.addArtifact(a1);
         w1.addArtifact(a3);
 
         Wizard w2 = new Wizard();
         w2.setName("wizard2");
-        w2.setId(2);
         w2.addArtifact(a2);
         w2.addArtifact(a4);
 
         Wizard w3 = new Wizard();
         w3.setName("wizard3");
-        w3.setId(3);
         w3.addArtifact(a5);
 
         wizardRepository.save(w1);
